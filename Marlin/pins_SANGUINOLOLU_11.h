@@ -115,7 +115,7 @@
 #endif
 
 #if !defined(FAN_PIN) && (MB(AZTEEG_X1) || MB(STB_11) || ENABLED(IS_MELZI))
-  #define FAN_PIN           4   // Works for Panelolu2 too
+  #define FAN_PIN           -1   // dvamod 4  // Works for Panelolu2 too
 #endif
 
 //
@@ -129,7 +129,7 @@
  * Sanguino libraries! See #368.
  */
 //#define SDSS               24
-#define SDSS               31
+#define SDSS                 29   //31 dvamod
 
 #if ENABLED(IS_MELZI)
   #define LED_PIN          27
@@ -231,12 +231,12 @@
 
   #elif ENABLED(LCD_FOR_MELZI)
 
-    #define LCD_PINS_RS         17
-    #define LCD_PINS_ENABLE     16
-    #define LCD_PINS_D4         11
-    #define BTN_ENC             28
-    #define BTN_EN1             29
-    #define BTN_EN2             30
+    #define LCD_PINS_RS         28 // dvamod 17
+    #define LCD_PINS_ENABLE     17 // dvamod 16
+    #define LCD_PINS_D4         30 // dvamod 11
+    #define BTN_ENC             16 // dvamod 28
+    #define BTN_EN1             11 // dvamod 29
+    #define BTN_EN2             10 // dvamod 30
 
     #ifndef ST7920_DELAY_1
       #define ST7920_DELAY_1 DELAY_NS(0)
